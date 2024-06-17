@@ -10,6 +10,8 @@ import Single from "./pages/Single";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./styles/login_register.scss"
+
 
 const Layout = () => {
   return (
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
         element:<Home/>
       },
       {
-        path:"/single",
+        path:"/post/:id",
         element:<Single/>
       },
       {
@@ -54,8 +56,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
-      <RouterProvider router={router}/>   
+    <div className="app">
+      <div className="container">
+        <RouterProvider router={router}/>   
+      </div>
     </div>
   );
 }

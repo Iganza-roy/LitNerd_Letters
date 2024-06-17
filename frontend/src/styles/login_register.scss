@@ -1,0 +1,68 @@
+$blue: rgb(176, 176, 243);
+
+.app {
+    .container {
+        .auth {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+
+            h1 {
+                // font-size: 20px;
+                color: rgb(1, 1, 71);
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                width: 300px;
+                gap: 20px;
+                background-color: #fff;
+                border-radius: 30px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+
+                input {
+                    padding: 10px;
+                    background-color: #eee;
+                    border: 1px solid grey;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 13px;
+                    outline: none;
+                }
+
+                button {
+                    background-color: #512da8;
+                    color: #fff;
+                    font-size: 12px;
+                    border: 1px solid transparent;
+                    padding: 10px 45px;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    margin-top: 10px;
+                }
+
+                span {
+                    font-size: 15px;
+                    text-align: center;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 15px;
+                    text-align: center;
+                    color: red;
+                }
+            }
+        }
+    }
+}
