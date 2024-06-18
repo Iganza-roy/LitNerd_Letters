@@ -41,6 +41,23 @@
                 h6 {
                     font-size: 16px;
                     font-weight: 500;
+                    position: relative;
+
+                     &::after{
+                        content: "";
+                        position: absolute;
+                        background-color: #512da8;
+                        height: 3px;
+                        width: 0;
+                        left: 0;
+                        bottom: -10px;  
+                        transition: 0.3s;   
+                    }
+
+                    &:hover::after{
+                        width: 100%;
+
+                    }
                 }
 
                 span {
@@ -56,6 +73,7 @@
                     &:hover {
                         color: #512da8;
                     }
+
                 }
             }
 

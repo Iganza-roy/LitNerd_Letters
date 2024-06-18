@@ -32,7 +32,7 @@ const Write = () => {
         <div className='item'>
           <h1>Category</h1>
           <div className="cat">
-            <input type="radio" name='Category' value="science" id='Science' />
+            <input type="radio" name='Category' value="science" id='science' />
             <label htmlFor="Science">Science</label>
           </div>
           <div className="cat">
@@ -40,15 +40,15 @@ const Write = () => {
             <label htmlFor="Science">Technology</label>
           </div>
           <div className="cat">
-            <input type="radio" name='Category' value="Art" id='Art' />
+            <input type="radio" name='Category' value="health" id='health' />
             <label htmlFor="Science">Art</label>
           </div>
           <div className="cat">
-            <input type="radio" name='Category' value="Lifestyle" id='Lifestyle' />
+            <input type="radio" name='Category' value="lifestyle" id='lifestyle' />
             <label htmlFor="Science">Lifestyle</label>
           </div>
           <div className='cat'>
-             <input type="radio" name='Category' value="Education" id='Education' />
+             <input type="radio" name='Category' value="education" id='education' />
              <label htmlFor="Science">Education</label>
           </div>
         </div>

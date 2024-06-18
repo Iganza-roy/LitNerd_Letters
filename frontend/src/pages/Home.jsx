@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import search from '../images/search.png'
 
 const Home = () => {
 
@@ -32,6 +33,12 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <div className='searchbar'>
+        <form action="" className='search-area'>
+          <input type="text" placeholder='Search for an article'/>
+          <button type='submit'> <img src={search} alt="search" /></button>
+        </form>
+      </div>
       <div className="posts">
         {posts.map(post=>(
           <div className="post" key={post.id}>

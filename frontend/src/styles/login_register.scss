@@ -1,7 +1,6 @@
 $purple: #c9d6ff;
 
 .app {
-
     .container {
         .auth {
             display: flex;
@@ -9,21 +8,40 @@ $purple: #c9d6ff;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #c9d6ff;
-            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 
             h1 {
-                // font-size: 20px;
                 color: rgb(1, 1, 71);
                 text-align: center;
             }
+
+            .register-logo{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    color: #512da8;
+                    font-style: italic;
+                }
+                
+
+                img{
+                    object-fit: cover;
+                    width: 120px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
 
             form {
                 display: flex;
                 flex-direction: column;
                 padding: 50px;
                 width: 300px;
-                gap: 20px;
+                gap: 15px;
                 background-color: #fff;
                 border-radius: 30px;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -40,6 +58,7 @@ $purple: #c9d6ff;
 
                 button {
                     background-color: #512da8;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
                     color: #fff;
                     font-size: 12px;
                     border: 1px solid transparent;
@@ -50,6 +69,11 @@ $purple: #c9d6ff;
                     text-transform: uppercase;
                     cursor: pointer;
                     margin-top: 10px;
+                    transition: 0.3s;
+
+                    &:hover{
+                        transform: translateY(-3px);
+                    }
                 }
 
                 span {
