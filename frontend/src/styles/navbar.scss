@@ -1,0 +1,94 @@
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1024px;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar {
+            .container {
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: all 0.3s ease;
+            }
+
+            .logo {
+
+                img {
+                    width: 120px;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover {
+                    transform: translateY(-3px);
+                }
+            }
+
+            .links {
+                display: flex;
+                gap: 19px;
+                align-items: center;
+                margin-left: 40px;
+
+                h6 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                span {
+                    cursor: pointer;
+                }
+
+                .category {
+                    transition: all 0.3s ease;
+                    padding: 6px 15px;
+                    border-radius: 20px;
+                    margin: 0 1px;
+
+                    &:hover {
+                        color: #512da8;
+                    }
+                }
+            }
+
+            .profile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-weight: 600;
+            }
+        }
+
+        .write {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+            transition: all 0.3s ease;
+            background-color: #512da8;
+            color: #fff;
+            font-size: 12px;
+            border: 1px solid transparent;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+
+
+            &:hover {
+                transform: translateY(-3px);
+                color: #fff;
+            }
+        }
+    }
+}

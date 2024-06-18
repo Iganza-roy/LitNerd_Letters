@@ -1,0 +1,29 @@
+.app {
+    .container {
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            border-radius: 6px;
+            font-weight: 500;
+
+            img {
+                height: 50px;
+            }
+
+            .copyright {
+                font-size: 13px;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    color: #2b0eac;
+                }
+            }
+        }
+    }
+}
