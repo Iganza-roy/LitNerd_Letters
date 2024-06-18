@@ -10,10 +10,13 @@ import Single from "./pages/Single";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./styles/write.scss"
+import "./styles/single.scss"
+import "./styles/home.scss"
 import "./styles/footer.scss"
 import "./styles/navbar.scss"
 import "./styles/login_register.scss";
-import "./styles/home.scss"
+
 
 
 const Layout = () => {

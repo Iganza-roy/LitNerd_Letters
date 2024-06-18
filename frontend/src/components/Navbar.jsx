@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className='navbar'>
         <div className="container">
             <div className="logo">
-                <img src={Logo} alt="logo" />
+                <Link to='/'><img src={Logo} alt="logo" /></Link>
             </div>
             <div className="links">
                 <Link className='link category' to='/?cat=science'>
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <h6>Education</h6>
                 </Link>
             </div>
-            <span className='write'>
+            <span className='new-article'>
                     <Link className='link' to='/write'>New Article &#128240;</Link>
             </span>
             <div className='profile'>
