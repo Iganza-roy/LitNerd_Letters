@@ -25,12 +25,12 @@
                 img {
                     width: 120px;
                     transition: all 0.3s ease;
-                }
 
-                &:hover {
+                    &:hover {
                     transform: translateY(-3px);
                 }
             }
+        }
 
             .links {
                 display: flex;
