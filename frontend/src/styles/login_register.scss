@@ -74,6 +74,11 @@ $purple: #c9d6ff;
                     &:hover{
                         transform: translateY(-3px);
                     }
+
+                    &:active{
+                        background-color: #c9d6ff;
+                        color: #512da8;
+                    }
                 }
 
                 span {
