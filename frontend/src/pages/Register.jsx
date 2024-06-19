@@ -1,8 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from "../images/Litnerd_letters_logo_name.png"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from "../images/Litnerd_letters_logo_name.png";
 
-const register = () => {
+const Register = () => {
+  const [inputs, setInputs] = useState({
+    username:"",
+    email:"",
+    password:""
+  });
+
+
+  const handleChange = e => {
+    setInputs(prev=>({...prev, [e.target.name]: e.target.value}));
+  }
+
+  console.log(inputs)
+
   return (
     <div className='auth'>
       <form>
@@ -12,9 +25,9 @@ const register = () => {
           <p>Snippets of stories and insights</p>
         </div>
         <h1>Create Account</h1>
-        <input required type="text" placeholder='Username' />
-        <input required type="text" placeholder='Email' />
-        <input required type="password" placeholder='Password' />
+        <input required type="text" placeholder='Username' name='username' onChange={handleChange} />
+        <input required type="text" placeholder='Email' name='email' onChange={handleChange} />
+        <input required type="password" placeholder='Password' name='password' onChange={handleChange} />
         <button>Sign up</button>
         <p>This is an error</p>
         <span>Already have an account? <Link to="/login">Login</Link></span>
@@ -23,4 +36,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register;
