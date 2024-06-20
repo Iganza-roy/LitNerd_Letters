@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/Plan_Architecture
 .pnp.js
 .eslintrc.json
 .prettierrc
