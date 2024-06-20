@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from "../images/Litnerd_letters_logo_name.png";
 import axios from 'axios';
 
@@ -10,21 +10,24 @@ const Register = () => {
     password:""
   });
 
+  const [err, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   const handleChange = e => {
     setInputs(prev=>({...prev, [e.target.name]: e.target.value}));
-  }
+  };
 
   const handleSubmit = async e => {
-    e.preventDefault()
+    e.preventDefault();
 
     try{
-       const res = await axios.post("/auth/register", inputs)
-       console.log(res)
+       await axios.post("/auth/register", inputs);
+       navigate("/login");
     } catch(err){
-      console.log("This is an error", err)
+      setError(err.response.data);
     }
-  }
+  };
 
   return (
     <div className='auth'>
@@ -39,7 +42,7 @@ const Register = () => {
         <input required type="text" placeholder='Email' name='email' onChange={handleChange} />
         <input required type="password" placeholder='Password' name='password' onChange={handleChange} />
         <button onClick={handleSubmit}>Sign up</button>
-        <p>This is an error</p>
+        {err && <p>{err}</p>}
         <span>Already have an account? <Link to="/login">Login</Link></span>
       </form>
     </div>
