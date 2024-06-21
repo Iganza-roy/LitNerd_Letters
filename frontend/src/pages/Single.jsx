@@ -13,11 +13,11 @@ const Single = () => {
 
   const [post, setPost] = useState({});
 
-  const location = useLocation()
+  const location = useLocation();
 
-  const postId = location.pathname.split("/")[2]
+  const postId = location.pathname.split("/")[2];
 
-  const {currentUser} = useContext(AuthContext)
+  const {currentUser} = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async ()=> {
@@ -36,11 +36,10 @@ const Single = () => {
       try{
         await axios.delete(`/posts/${postId}`);
         navigate("/");
-
       }catch(err){
         console.log(err);
       }
-  }
+    }
 
   return (
     <div className='single'>

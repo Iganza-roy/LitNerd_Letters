@@ -27,11 +27,11 @@ export const addPost = (req, res) => {
 };
 
 export const deletePost = (req, res) => {
-    const token = req.cookies.access_token
-    if(!token) return res.status(401).json("Not Authenticated!")
+    const token = req.cookies.access_token;
+    if(!token) return res.status(401).json("Not Authenticated!");
         
     jwt.verify(token, "jwtkey", (err, userinfo) => {
-        if(err) return res.status(403).json("Token is valid!")
+        if(err) return res.status(403).json("Token is invalid!")
 
         const postId = req.params.id
         const q = "DELETE FROM posts WHERE `id` = ? AND `uid` = ?"
