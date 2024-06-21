@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from "../images/Litnerd_letters_logo_name.png";
 import axios from 'axios';
