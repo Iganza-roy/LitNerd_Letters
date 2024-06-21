@@ -60,6 +60,7 @@ const Home = () => {
         {posts.map(post=>(
           <div className="post" key={post.id}>
             <div className="img">
+              {/* <div className="overlay"></div> */}
               <img src={post.img} alt="post" />
             </div>
             <div className="content">
