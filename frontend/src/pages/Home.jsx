@@ -61,7 +61,7 @@ const Home = () => {
           <div className="post" key={post.id}>
             <div className="img">
               {/* <div className="overlay"></div> */}
-              <img src={post.img} alt="post" />
+              <img src={`../../public/post_img_uploads/post.img`} alt="post" />
             </div>
             <div className="content">
               <Link className='link' to={`/post/${post.id}`}>
