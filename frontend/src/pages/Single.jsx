@@ -61,7 +61,7 @@ const Single = () => {
         <h1>{post.title}</h1>
         {post.desc}
       </div>
-      <Panel />
+      <Panel cat={post.cat}/>
     
     </div>
   )
