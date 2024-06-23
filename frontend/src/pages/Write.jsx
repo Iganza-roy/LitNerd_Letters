@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import moment from 'moment';
+
 
 const Write = () => {
 
@@ -13,6 +14,7 @@ const Write = () => {
   const [file, setFile] = useState(null);
   const [cat, setCat] = useState(state?.cat || '');
 
+  const navigate = useNavigate();
 
   const upload = async () => {
     try{
@@ -33,6 +35,7 @@ const Write = () => {
         title, desc:value, cat, img: file ? imgUrl : ""
       }) : await axios.post(`/posts/`, {
         title, desc:value, cat, img: file ? imgUrl : "", date: moment(Date.now()).format("YYYY.MM.DD HH:mm:ss")})
+        navigate("/")
     }catch(err) {
       console.log(err)
     }
@@ -74,7 +77,7 @@ const Write = () => {
           </div>
           <div className="cat">
             <input type="radio" checked={cat === "health"} name='Category' value="health" id='health' onChange={e=>setCat(e.target.value)}/>
-            <label htmlFor="Science">Art</label>
+            <label htmlFor="Science">Health</label>
           </div>
           <div className="cat">
             <input type="radio" checked={cat === "lifestyle"} name='Category' value="lifestyle" id='lifestyle' onChange={e=>setCat(e.target.value)}/>
