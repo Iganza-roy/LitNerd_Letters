@@ -16,7 +16,7 @@ const Write = () => {
 
   const navigate = useNavigate();
 
-  const upload = async (file) => {
+  const upload = async () => {
     try{
       const formData = new FormData();
       formData.append("file", file)
@@ -28,7 +28,7 @@ const Write = () => {
   }
   const handleClick = async e => {
     e.preventDefault()
-    const imgUrl = await upload(file)
+    const imgUrl = await upload()
 
     try {
       state ? await axios.put(`/posts/${state.id}`, {

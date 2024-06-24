@@ -7,12 +7,15 @@ import multer from 'multer';
 
 const app = express();
 
+// const path = require('path');
+// app.use('/upload', express.static(path.join(__dirname, 'upload')));
+
 app.use(express.json());
 app.use(cookieParser());
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../frontend/src/upload/')
+        cb(null, '../frontend/public/upload/')
     },
     filename: function (req, file, cb) {
         cb(null, Date.now()+file.originalname)
