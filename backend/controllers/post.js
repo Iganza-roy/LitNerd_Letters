@@ -80,7 +80,6 @@ export const updatePost = (req, res) => {
             req.body.desc,
             req.body.img,
             req.body.cat,
-            req.body.date,
             userInfo.id
         ]
 

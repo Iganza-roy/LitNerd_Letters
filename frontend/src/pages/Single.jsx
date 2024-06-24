@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
 import { AuthContext } from '../context/authContext';
+import DOMPurify from 'dompurify';
 
 const Single = () => {
 
@@ -59,10 +60,9 @@ const Single = () => {
           </div>)}
         </div>
         <h1>{post.title}</h1>
-        {post.desc}
+        <p dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(post.desc),}}></p>
       </div>
       <Panel cat={post.cat}/>
-    
     </div>
   )
 }
