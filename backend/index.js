@@ -7,9 +7,6 @@ import multer from 'multer';
 
 const app = express();
 
-// const path = require('path');
-// app.use('/upload', express.static(path.join(__dirname, 'upload')));
-
 app.use(express.json());
 app.use(cookieParser());
 

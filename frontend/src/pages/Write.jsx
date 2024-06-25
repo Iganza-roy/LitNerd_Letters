@@ -12,6 +12,7 @@ const Write = () => {
   const [value, setValue] = useState(state?.desc || '');
   const [title, setTitle] = useState(state?.title || '');
   const [file, setFile] = useState(null);
+  // const [imgSource, setImageSource] = useState('upload');
   const [cat, setCat] = useState(state?.cat || '');
 
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const Write = () => {
       const formData = new FormData();
       formData.append("file", file)
       const res = await axios.post("/upload", formData)
+      console.log("Image uploaded: ", res.data);
       return res.data
     }catch(err) {
       console.log(err)
@@ -35,6 +37,7 @@ const Write = () => {
         title, desc:value, cat, img: file ? imgUrl : ""
       }) : await axios.post(`/posts/`, {
         title, desc:value, cat, img: file ? imgUrl : "", date: moment(Date.now()).format("YYYY.MM.DD HH:mm:ss")})
+        console.log("Post submitted successfully");
         navigate("/")
     }catch(err) {
       console.log(err)
@@ -58,6 +61,10 @@ const Write = () => {
           <span>
             <b>Visibility: </b> Public
           </span>
+          {/* <div>
+            <input type="radio" id='upload' name='imgSource' value='upload' checked={imgSource === 'upload'} onChange={() => setImageSource('upload')}/>
+            <label htmlFor="link">Image Link</label>
+          </div> */}
           <input style={{display:"none"}} type="file" id='file' onChange={e=>setFile(e.target.files[0])}/>
           <label className="img-upload" htmlFor="file">Upload Cover Image</label>
           <div className="buttons">

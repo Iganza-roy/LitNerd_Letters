@@ -6,7 +6,8 @@ import axios from 'axios';
 const Home = () => {
 
   const [posts, setPosts] = useState([]);
-
+  const [searchTerm, setSearchTerm] = useState('');
+  // const navigate = useNavigate();
   const cat = useLocation().search
 
   useEffect(() => {
@@ -27,11 +28,29 @@ const Home = () => {
     return doc.body.textContent
   }
 
+  // handling the search functionality
+  const handleSearch = async e => {
+    e.preventDefault();
+    try {
+      const res = await axios.get(`/posts?search=${searchTerm}`);
+      setPosts(res.data);
+    }catch (err) {
+      console.log(err);
+    }
+  };
+
+  // handling the description of the posts
+  const getDesc = (text, limit = 500) => {
+    return text.length > limit ? text.substring(0, limit) + '...' : text;
+  }
+
+  
+
   return (
     <div className='home'>
       <div className='searchbar'>
-        <form action="" className='search-area'>
-          <input type="text" placeholder='Search for an article'/>
+        <form action="" className='search-area' onSubmit={handleSearch}>
+          <input type="text" placeholder='Search for an article' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
           <button type='submit'> <img src={search} alt="search" /></button>
         </form>
       </div>
@@ -39,14 +58,14 @@ const Home = () => {
         {posts.map(post=>(
           <div className="post" key={post.id}>
             <div className="img">
-              {/* <div className="overlay"></div> */}
+              <div className="overlay"></div>
               <img src={`../upload/${post.img}`} alt="post" />
             </div>
             <div className="content">
               <Link className='link' to={`/post/${post.id}`}>
                 <h1>{post.title}</h1>
               </Link>
-                <p>{getText(post.desc)}</p>
+                <p>{getDesc(getText(post.desc))}</p>
                 <Link className='link' to={`/post/${post.id}`}><button>Read More</button></Link>
             </div>
           </div>
