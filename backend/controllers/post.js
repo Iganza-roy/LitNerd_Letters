@@ -18,6 +18,7 @@ export const getPosts = (req, res) => {
 
     db.query(q, queryParams, (err, data) => {
         if (err) return res.status(500).send(err);
+        // if (data.length === 0) return res.status(404).json({ message: "No posts found" });
         return res.status(200).json(data);
     });
 };

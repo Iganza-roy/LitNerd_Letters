@@ -15,7 +15,6 @@ const Home = () => {
       try{
         const res = await axios.get(`/posts${cat}`);
         setPosts(res.data);
-
       }catch(err){
         console.log(err);
       }
@@ -43,9 +42,6 @@ const Home = () => {
   const getDesc = (text, limit = 500) => {
     return text.length > limit ? text.substring(0, limit) + '...' : text;
   }
-
-  
-
   return (
     <div className='home'>
       <div className='searchbar'>
@@ -58,7 +54,7 @@ const Home = () => {
         {posts.map(post=>(
           <div className="post" key={post.id}>
             <div className="img">
-              <div className="overlay"></div>
+              {/* <div className="overlay"></div> */}
               <img src={`../upload/${post.img}`} alt="post" />
             </div>
             <div className="content">

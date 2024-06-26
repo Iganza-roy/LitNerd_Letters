@@ -72,7 +72,8 @@
                     .img{
                         flex: 2;
                         position: relative;
-
+                        display: inline-block;
+                        
                         &::after{
                                 content: "";
                                 width: 100%;
@@ -86,7 +87,7 @@
                                 transition: all 0.3s ease;
                             }
 
-                        // .overlay {
+                        // .overlay {                        
                         //     width: 100%;
                         //     height: 100%;
                         //     background-color: #c9d6ff;
@@ -109,7 +110,6 @@
                                 transform: translateX(-5px);
                                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
                             }
-
                         }
                     }
                     .content{
