@@ -15,6 +15,7 @@ import "./styles/single.scss"
 import "./styles/home.scss"
 import "./styles/footer.scss"
 import "./styles/navbar.scss"
+import "./styles/home.scss"
 import "./styles/login_register.scss";
 
 

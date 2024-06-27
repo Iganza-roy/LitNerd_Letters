@@ -34,8 +34,8 @@ const Navbar = () => {
                     <Link className='link' to='/write'>New Article &#128240;</Link>
             </span>
             <div className='profile'>
-                <Link className='link'><span>{currentUser?.username}</span></Link>
-                {currentUser ? <Link className='link'><span onClick={logout}>Logout</span></Link> : <Link className='link' to="/login">Login</Link>}
+                <Link className='link username'><span>{currentUser?.username}</span></Link>
+                {currentUser ? <Link className='link username'><span onClick={logout}>Logout</span></Link> : <Link className='link username' to="/login">Login</Link>}
             </div>
             {/* <div>Searchbox</div> */}
         </div>

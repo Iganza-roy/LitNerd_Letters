@@ -40,7 +40,7 @@ const Write = () => {
         console.log("Post submitted successfully");
         navigate("/")
     }catch(err) {
-      console.log(err)
+      console.log("Error submitting post")
     }
   }
 
@@ -61,10 +61,6 @@ const Write = () => {
           <span>
             <b>Visibility: </b> Public
           </span>
-          {/* <div>
-            <input type="radio" id='upload' name='imgSource' value='upload' checked={imgSource === 'upload'} onChange={() => setImageSource('upload')}/>
-            <label htmlFor="link">Image Link</label>
-          </div> */}
           <input style={{display:"none"}} type="file" id='file' onChange={e=>setFile(e.target.files[0])}/>
           <label className="img-upload" htmlFor="file">Upload Cover Image</label>
           <div className="buttons">
@@ -91,8 +87,8 @@ const Write = () => {
             <label htmlFor="Science">Lifestyle</label>
           </div>
           <div className='cat'>
-             <input type="radio" checked={cat === "education"} name='Category' value="education" id='education' onChange={e=>setCat(e.target.value)}/>
-             <label htmlFor="Science">Education</label>
+             <input type="radio" checked={cat === "Fashion"} name='Category' value="Fashion" id='Fashion' onChange={e=>setCat(e.target.value)}/>
+             <label htmlFor="Science">Fashion</label>
           </div>
         </div>
       </div>
