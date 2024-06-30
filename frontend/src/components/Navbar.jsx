@@ -37,7 +37,6 @@ const Navbar = () => {
                 <Link className='link username'><span>{currentUser?.username}</span></Link>
                 {currentUser ? <Link className='link username'><span onClick={logout}>Logout</span></Link> : <Link className='link username' to="/login">Login</Link>}
             </div>
-            {/* <div>Searchbox</div> */}
         </div>
         </div>
     )
