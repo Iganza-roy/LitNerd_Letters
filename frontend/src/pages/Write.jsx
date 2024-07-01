@@ -56,20 +56,20 @@ const Write = () => {
         <div className='item'>
           <h1>Publish Article</h1>
           <span>
-            <b>Status: </b> Draft
+            <b>Post Status: </b> (coming soon)
           </span>
           <span>
-            <b>Visibility: </b> Public
+            <b>word count: </b> {value.split(' ').filter(word => word !== '').length}
           </span>
           <input style={{display:"none"}} type="file" id='file' onChange={e=>setFile(e.target.files[0])}/>
           <label className="img-upload" htmlFor="file">Upload Cover Image</label>
           <div className="buttons">
-            <button>Save as draft</button>
+            {/* <button>Save as draft</button> */}
             <button onClick={handleClick}>Publish</button>
           </div>
         </div>
         <div className='item'>
-          <h1>Category</h1>
+          <h1>Choose category</h1>
           <div className="cat">
             <input type="radio" checked={cat === "science"} name='Category' value="science" id='science' onChange={e=>setCat(e.target.value)}/>
             <label htmlFor="Science">Science</label>

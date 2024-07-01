@@ -10,9 +10,10 @@ const Navbar = () => {
     return (
     <div className='navbar'>
         <div className="container">
-             <div className="logo">
+            <div className="logo">
                 <Link to='/'><img src={Logo} alt="logo" /></Link>
             </div>
+            <input type="checkbox" id='check' />
             <div className="links">
                 <Link className='link category' to='/?cat=science'>
                 <h6>Science</h6>
@@ -37,6 +38,8 @@ const Navbar = () => {
                 <Link className='link username'><span>{currentUser?.username}</span></Link>
                 {currentUser ? <Link className='link username'><span onClick={logout}>Logout</span></Link> : <Link className='link username' to="/login">Login</Link>}
             </div>
+            <label htmlFor="check" className='close-menu'><i className='fas fa-times'></i></label>
+            <label htmlFor="check" className='open-menu'><i className='fas fa-bars'></i></label>
         </div>
         </div>
     )

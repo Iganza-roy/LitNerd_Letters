@@ -17,7 +17,7 @@ import "./styles/footer.scss"
 import "./styles/navbar.scss"
 import "./styles/home.scss"
 import "./styles/login_register.scss";
-
+import '@fortawesome/fontawesome-free/css/all.css';
 
 
 const Layout = () => {

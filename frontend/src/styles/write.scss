@@ -56,12 +56,17 @@
                         padding-top: 10px;
                         color: #512da8;
                         font-weight: 500;
+                        transition: all 0.3s ease;
+
+                        &:hover{
+                            transform: translateY(-3px);
+                        }
                     }
 
                     .buttons{
                         padding-top: 10px;
                         display: flex;
-                        justify-content: space-between;
+                        // justify-content: space-between;
 
                         :first-child{
                             width: max-content;
