@@ -30,7 +30,9 @@ const Navbar = () => {
                 <Link className='link category' to='/?cat=fashion'>
                 <h6>Fashion</h6>
                 </Link>
+                <label htmlFor="check" className='close-menu'><i className='fas fa-times'></i></label>
             </div>
+            <label htmlFor="check" className='open-menu'><i className='fas fa-bars'></i></label>
             <span className='new-article'>
                     <Link className='link' to='/write'>New Article &#128240;</Link>
             </span>
@@ -38,8 +40,6 @@ const Navbar = () => {
                 <Link className='link username'><span>{currentUser?.username}</span></Link>
                 {currentUser ? <Link className='link username'><span onClick={logout}>Logout</span></Link> : <Link className='link username' to="/login">Login</Link>}
             </div>
-            <label htmlFor="check" className='close-menu'><i className='fas fa-times'></i></label>
-            <label htmlFor="check" className='open-menu'><i className='fas fa-bars'></i></label>
         </div>
         </div>
     )

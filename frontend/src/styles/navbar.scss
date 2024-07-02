@@ -130,12 +130,12 @@
 
         .open-menu {
             top: 50%;
-            right: 20px;
+            right: 23px;
         }
 
-        .open-menu {
+        .close-menu {
             top: 20%;
-            right: 25px;
+            right: 1px;
         }
 
         #check {
@@ -145,105 +145,79 @@
 }
 
 @media (max-width: 610px) {
-.app {
+    .app {
 
-    .container {
+        .container {
 
-        .navbar {
-            .container {
-                padding: 10px 0px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                transition: all 0.3s ease;
+            .navbar {
+                .container {
+                    padding: 10px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    transition: all 0.3s ease;
+                }
+
+                .logo {
+
+                    img {
+                        width: 70px;
+                        order: 3;
+                }
             }
 
-            .logo {
+                .links {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    z-index: 100;
+                    background-color: aliceblue;
+                    transition: all 0.2s ease-in-out;
+                    color: #512da8;
 
-                img {
-                    width: 120px;
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                    transform: translateY(-3px);
-                    border-radius: 10px;
-                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
-                }
-            }
-        }
-
-            .links {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 80%;
-                height: 100vh;
-                position: fixed;
-                top: 0;
-                right: -100%;
-                z-index: 100;
-                background-color: aliceblue;
-                transition: all 0.2s ease-in-out;
-                color: #512da8;
-
-                h6 {
-                    margin-top: 40px;
-                    padding: 10px;
-                }
-
-                span {
-                    cursor: pointer;
-                }
-
-                .category {
-                    transition: all 0.3s ease;
-                    padding: 6px 15px;
-                    border-radius: 20px;
-                    margin: 0 1px;
-
-                    &:hover {
-                        color: #512da8;
+                    h6 {
+                        margin-top: 3px;
                     }
 
+                    .category {
+                        padding: 3px;
+                    }  
+                }
+
+                .profile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 3px;
+                    font-weight: 400;
+                    font-size: small;
                 }
             }
 
-            .profile {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                font-weight: 600;
+            .new-article {
+                font-size: 10px;
+                border: 1px solid transparent;
+                padding: 7px 9px;
+                font-weight: 400;
+                text-transform: inherit;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    color: #fff;
+                }
             }
-        }
-
-        .new-article {
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
-            transition: all 0.3s ease;
-            background-color: #512da8;
-            color: #fff;
-            font-size: 12px;
-            border: 1px solid transparent;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            margin-top: 10px;
-
-
-            &:hover {
-                transform: translateY(-3px);
-                color: #fff;
+            .open-menu, .close-menu {
+                order: 3;
+                display: block;
+                z-index: 100;
             }
+            #check:checked ~ .links{right: 0;}
         }
-        .open-menu, .close-menu {
-            display: block;
-        }
-
-        #check:checked ~ .links{right: 0;}
     }
-}
 }
