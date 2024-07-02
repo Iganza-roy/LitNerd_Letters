@@ -40,3 +40,31 @@
         }
     }
 }
+
+@media (max-width: 610px) {
+    .app {
+        .container {
+            footer {
+                margin-top: 70px;
+                padding: 10px;
+                justify-content: space-between;
+                font-weight: 500;
+
+                img {
+                    height: 50px;
+                }
+
+                .copyright {
+                    font-size: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    padding-left: 0px;
+                }
+
+                .slogan {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

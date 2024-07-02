@@ -110,3 +110,58 @@
             }
         }
 }
+
+@media (max-width: 610px) {
+    .app{
+        .container{
+            .single{
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 5;
+                    gap: 15px;
+
+                    img{
+                        height: 200px;
+                    }
+
+                    h1{
+                        font-size: 35px;
+                        color: #270d36;
+                    }
+
+                    p{
+                        line-height: 25px;
+                    }
+                }
+                .panel{
+                    gap: 20px;
+
+                    h1{
+                        font-size: 25px;
+                    }
+
+                    .post{
+                        gap: 5px;
+
+                        img{
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+                        }
+
+                        button{
+                                padding: 6px 10px;
+                                border-radius: 8px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}

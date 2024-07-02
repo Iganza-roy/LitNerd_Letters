@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <a href="https://github.com/Iganza-roy"><img src={Logo} alt="logo" /></a>
       <span className='copyright'>@Roy Kibata - 2024</span>
-      <span>Snippets of Stories and Insights &#128218;</span>
+      <span className='slogan'>Snippets of Stories and Insights &#128218;</span>
     </footer>
   )
 }
