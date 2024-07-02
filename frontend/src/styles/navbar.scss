@@ -144,7 +144,51 @@
     }
 }
 
-@media (max-width: 610px) {
+@media (min-width: 641px) and (max-width: 1023px) {
+    .app {
+        .container {
+
+            .navbar {
+                .logo {
+
+                    img {
+                        width: 80px;
+                }
+            }
+
+                .links {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    margin-left: 15px;
+
+                    h6 {
+                        font-size: 14px;
+                    }
+
+                    .category {
+                        padding: 6px 10px;
+                    }
+                }
+
+                .profile {
+                    gap: 5px;
+                    font-weight: 600;
+                }
+            }
+
+            .new-article {
+                font-size: 12px;
+                border: 1px solid transparent;
+                padding: 8px 10px;
+                border-radius: 8px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
     .app {
 
         .container {

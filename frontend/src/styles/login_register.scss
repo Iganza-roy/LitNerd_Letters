@@ -99,3 +99,19 @@
         }
     }
 }
+
+@media (max-width: 640px) {
+    .app {
+        .container {
+            .auth {           
+                h1 {
+                    font-size: 30px;
+                }
+
+                form {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
