@@ -1,6 +1,9 @@
+// managing posts
+
 import {db} from "../dbm.js";
 import jwt from "jsonwebtoken";
 
+// fetching & filtering posts
 export const getPosts = (req, res) => {
    
     const searchQuery = req.query.search;
@@ -18,12 +21,12 @@ export const getPosts = (req, res) => {
 
     db.query(q, queryParams, (err, data) => {
         if (err) return res.status(500).send(err);
-        // if (data.length === 0) return res.status(404).json({ message: "No posts found" });
         return res.status(200).json(data);
     });
 };
 
 
+// fetching single post by id
 export const getPost = (req, res) => {
     const q = "SELECT p.id, `username`, `title`, `desc`, p.img, u.img AS userImg, `cat`,`date` FROM users u JOIN posts p ON u.id = p.uid WHERE p.id = ? ";
 
@@ -35,6 +38,7 @@ export const getPost = (req, res) => {
 };
 
 
+//adding a new post
 export const addPost = (req, res) => {
     const token = req.cookies.access_token;
     if(!token) return res.status(401).json("Not Authenticated!");
@@ -60,6 +64,7 @@ export const addPost = (req, res) => {
     });
 };
 
+// deleting posts by id
 export const deletePost = (req, res) => {
     const token = req.cookies.access_token;
     if(!token) return res.status(401).json("Not Authenticated!");
@@ -78,8 +83,10 @@ export const deletePost = (req, res) => {
     })
 };
 
+
+// updating posts by id
 export const updatePost = (req, res) => {
-        const token = req.cookies.access_token;
+    const token = req.cookies.access_token; 
     if(!token) return res.status(401).json("Not Authenticated!");
         
     jwt.verify(token, "jwtkey", (err, userInfo) => {

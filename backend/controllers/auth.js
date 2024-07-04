@@ -1,10 +1,12 @@
-    import {db} from "../dbm.js";
+// handling authentication logic
+
+import {db} from "../dbm.js";
     import bcrypt from "bcryptjs";
     import jwt from "jsonwebtoken";
 
     export const register = (req, res) => {
 
-        // existing user
+        // check if user exists
 
         const q = "SELECT * FROM users WHERE email = ? OR username = ?"
         
@@ -34,6 +36,8 @@
         
     };
 
+    // user login
+
     export const login = (req, res) => {
         // check if user exists
 
@@ -43,14 +47,14 @@
             if(err) return res.json(err);
             if (data.length === 0) return res.status(404).json("Invalid username")
 
-            // password confirmation
-
+            // password verification
             const pass = bcrypt.compareSync(req.body.password, data[0].password);
-
             if(!pass) return res.status(400).json("Invalid username or password")
             
             const token = jwt.sign({id:data[0].id}, "jwtkey");
             const {password, ...other} = data[0]
+
+            //send tocken as cookie
 
             res.cookie("access_token", token, {
                 httpOnly:true
@@ -58,6 +62,8 @@
 
         });
     };
+
+    // user logout
 
     export const logout = (req, res) => {
 

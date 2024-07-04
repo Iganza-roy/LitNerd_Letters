@@ -1,3 +1,5 @@
+// handling the navigation bar
+
 import React, { useContext } from 'react'
 import {Link} from 'react-router-dom'
 import Logo from "../images/Litnerd_letters_logo_name.png"
@@ -36,7 +38,7 @@ const Navbar = () => {
             <span className='new-article'>
                     <Link className='link' to='/write'>New Article &#128240;</Link>
             </span>
-            <div className='profile'>
+            <div className='profile'> {/*display username and logout/login*/}
                 <Link className='link username'><span>{currentUser?.username}</span></Link>
                 {currentUser ? <Link className='link username'><span onClick={logout}>Logout</span></Link> : <Link className='link username' to="/login">Login</Link>}
             </div>

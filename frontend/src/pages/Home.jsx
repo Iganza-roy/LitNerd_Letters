@@ -7,7 +7,6 @@ const Home = () => {
 
   const [posts, setPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  // const navigate = useNavigate();
   const cat = useLocation().search
 
   useEffect(() => {
@@ -38,7 +37,7 @@ const Home = () => {
     }
   };
 
-  // handling the description of the posts
+  //  truncates description of the posts to 500 chars
   const getDesc = (text, limit = 500) => {
     return text.length > limit ? text.substring(0, limit) + '...' : text;
   }

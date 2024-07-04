@@ -1,3 +1,5 @@
+//Handling the writing/editing functionality
+
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -12,11 +14,11 @@ const Write = () => {
   const [value, setValue] = useState(state?.desc || '');
   const [title, setTitle] = useState(state?.title || '');
   const [file, setFile] = useState(null);
-  // const [imgSource, setImageSource] = useState('upload');
   const [cat, setCat] = useState(state?.cat || '');
 
   const navigate = useNavigate();
 
+  // handling file upload
   const upload = async () => {
     try{
       const formData = new FormData();
@@ -28,6 +30,8 @@ const Write = () => {
       console.log(err)
     }
   }
+
+  // handling submission of created or edited post
   const handleClick = async e => {
     e.preventDefault()
     const imgUrl = await upload()
@@ -37,8 +41,8 @@ const Write = () => {
         title, desc:value, cat, img: file ? imgUrl : ""
       }) : await axios.post(`/posts/`, {
         title, desc:value, cat, img: file ? imgUrl : "", date: moment(Date.now()).format("YYYY.MM.DD HH:mm:ss")})
-        console.log("Post submitted successfully");
         navigate("/")
+        console.log("Post submitted successfully");
     }catch(err) {
       console.log("Error submitting post")
     }

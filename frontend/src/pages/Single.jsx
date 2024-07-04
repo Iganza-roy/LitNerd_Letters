@@ -1,3 +1,4 @@
+// Handling display of a single post
 import React, { useContext, useEffect, useState } from 'react';
 import Edit from "../images/edit.png";
 import Delete from "../images/delete.png";
@@ -16,10 +17,11 @@ const Single = () => {
 
   const location = useLocation();
 
-  const postId = location.pathname.split("/")[2];
+  const postId = location.pathname.split("/")[2]; // extracting the postId
 
-  const {currentUser} = useContext(AuthContext);
+  const {currentUser} = useContext(AuthContext); // for checking logged in user info
 
+  // fetching post data
   useEffect(() => {
     const fetchData = async ()=> {
       try{
@@ -33,6 +35,7 @@ const Single = () => {
     fetchData()
   },[postId]);
 
+  // handling delete functionality
   const handleDelete = async () => {
       try{
         await axios.delete(`/posts/${postId}`);

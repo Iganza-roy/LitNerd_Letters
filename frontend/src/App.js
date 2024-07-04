@@ -19,7 +19,7 @@ import "./styles/home.scss"
 import "./styles/login_register.scss";
 import '@fortawesome/fontawesome-free/css/all.css';
 
-
+// creating a common layout for pages
 const Layout = () => {
   return (
     <>
@@ -30,6 +30,8 @@ const Layout = () => {
   );
 };
 
+
+// defining th routing configuration
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,6 +63,8 @@ const router = createBrowserRouter([
   },
 ]);
 
+
+// the main application component
 function App() {
   return (
     <div className="app">
