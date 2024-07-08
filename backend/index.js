@@ -6,11 +6,21 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from 'cookie-parser';
 import multer from 'multer';
+import cors from 'cors';
 
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+
+const corsOptions = {
+    origin: 'https://lit-nerd-letters.vercel.app',
+    credentials: true,
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 
 // handling file upload with multer
 
