@@ -3,9 +3,6 @@ import {Link, useLocation} from 'react-router-dom';
 import search from '../images/search.png';
 import axios from '../axiosinstance';
 
-
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-
 const Home = () => {
 
   const [posts, setPosts] = useState([]);

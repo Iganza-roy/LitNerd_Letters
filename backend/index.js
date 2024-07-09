@@ -12,7 +12,7 @@ const app = express();
 
 // Enabling CORS for frontend domain
 const corsOptions = {
-    origin: 'https://litnerdletters.netlify.app/',
+    origin: 'https://litnerdletters.netlify.app',
 };
 
 app.use(cors(corseoptions))
