@@ -4,7 +4,7 @@ import Edit from "../images/edit.png";
 import Delete from "../images/delete.png";
 import Panel from '../components/Panel';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../axiosinstance';
 import moment from 'moment';
 import { AuthContext } from '../context/authContext';
 import DOMPurify from 'dompurify';

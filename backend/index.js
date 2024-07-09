@@ -6,9 +6,16 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from 'cookie-parser';
 import multer from 'multer';
+import cors from 'cors';
 
 const app = express();
 
+// Enabling CORS for frontend domain
+const corsOptions = {
+    origin: 'https://litnerdletters.netlify.app/',
+};
+
+app.use(cors(corseoptions))
 app.use(express.json());
 app.use(cookieParser());
 
@@ -38,7 +45,9 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/posts", postRoutes);
 
-app.listen(5500, () => {
-    console.log("connected to Backend!");
+
+const PORT = process.env.PORT || 5500;
+app.listen(PORT, () => {
+    console.log(`connected to Backend on port ${PORT}!`);
 });
 
