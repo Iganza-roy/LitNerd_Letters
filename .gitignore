@@ -3,6 +3,7 @@
 # dependencies
 /.pnp
 /Plan_Architecture
+deploydb.Sql
 
 # testing
 /coverage
