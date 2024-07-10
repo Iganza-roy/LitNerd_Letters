@@ -1,188 +1,178 @@
-# [LitNerd Letters](https://iganza-roy.github.io/Litnerd_letters-about/)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LitNerd Letters</title>
+</head>
+<body>
+    <h1><a href="https://iganza-roy.github.io/Litnerd_letters-about/">LitNerd Letters</a></h1>
 
-![cover](https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg)
+    <img src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg" alt="cover" style="width:100%;max-width:600px;">
 
-## Snippets of Stories and Insights
+    <h2>Snippets of Stories and Insights</h2>
+    <p>LitNerd Letters is a blog site where bloggers and writers can easily create, share, and discover articles and stories. It serves as a platform for literary enthusiasts to connect and share their insights and narratives.</p>
+    <p>Click <a href="https://iganza-roy.github.io/Litnerd_letters-about/">here</a> to learn more about litnerd letters.</p>
 
-LitNerd Letters is a blog site where bloggers and writers can easily create, share, and discover articles and stories. It serves as a platform for literary enthusiasts to connect and share their insights and narratives.
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#technologies-used">Technologies Used</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#database-setup">Database Setup</a></li>
+        <li><a href="#environment-variables">Environment Variables</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#contributing">Contributing</a></li>
+        <li><a href="#author">Author</a></li>
+    </ul>
 
-Click [here](https://iganza-roy.github.io/Litnerd_letters-about/) to learn more about litnerd letters.
+    <h2 id="features">Features</h2>
+    <ul>
+        <li>User authentication and authorization</li>
+        <li>Create, read, update, and delete (CRUD) functionality for posts</li>
+        <li>Rich text editor for creating and editing posts</li>
+        <li>Category-based post filtering</li>
+        <li>Search functionality</li>
+        <li>File upload for post images</li>
+        <li>Responsive design</li>
+    </ul>
 
-## Table of Contents
+    <h2 id="technologies-used">Technologies Used</h2>
+    <h3>Frontend</h3>
+    <ul>
+        <li><a href="https://react.dev/">React</a></li>
+        <li><a href="https://www.npmjs.com/package/axios">Axios</a></li>
+        <li><a href="https://reactrouter.com/en/main">React Router DOM</a></li>
+        <li><a href="https://www.npmjs.com/package/react-quill">React Quill (Rich Text Editor)</a></li>
+        <li><a href="https://sass-lang.com/">Sass (CSS Preprocessor)</a></li>
+        <li><a href="https://cdnjs.com/libraries/font-awesome">FontAwesome (Icons)</a></li>
+        <li><a href="https://www.npmjs.com/package/moment">Moment.js (Date manipulation)</a></li>
+        <li><a href="https://www.npmjs.com/package/dompurify">DOMPurify (Sanitizing HTML)</a></li>
+    </ul>
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Database Setup](#database-setup)
-- [Environment Variables](#environment-variables)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Author](#Author)
+    <h3>Backend</h3>
+    <ul>
+        <li><a href="https://nodejs.org/en">Node.js</a></li>
+        <li><a href="https://expressjs.com/">Express.js</a></li>
+        <li><a href="https://www.mysql.com/">MySQL</a></li>
+        <li><a href="https://www.npmjs.com/package/multer">Multer (File upload handling)</a></li>
+        <li><a href="https://www.npmjs.com/package/jsonwebtoken">JWT (JSON Web Token for authentication)</a></li>
+        <li><a href="https://www.npmjs.com/package/bcryptjs">Bcrypt.js (Password hashing)</a></li>
+        <li><a href="https://www.npmjs.com/package/cookie-parser">Cookie-parser</a></li>
+    </ul>
 
-## Features
+    <h2 id="installation">Installation</h2>
+    <h3>Prerequisites</h3>
+    <ul>
+        <li>Node.js</li>
+        <li>MySQL Server and Workbench</li>
+    </ul>
 
-- User authentication and authorization
-- Create, read, update, and delete (CRUD) functionality for posts
-- Rich text editor for creating and editing posts
-- Category-based post filtering
-- Search functionality
-- File upload for post images
-- Responsive design
+    <h3>Frontend Setup</h3>
+    <ol>
+        <li>Clone the repository:
+            <pre><code>git clone https://github.com/iganza-roy/litnerd-letters.git</code></pre>
+        </li>
+        <li>Navigate to the frontend directory:
+            <pre><code>cd litnerd-letters/frontend</code></pre>
+        </li>
+        <li>Install the dependencies:
+            <pre><code>npm install</code></pre>
+        </li>
+    </ol>
 
-## Technologies Used
+    <h3>Backend Setup</h3>
+    <ol>
+        <li>Navigate to the backend directory:
+            <pre><code>cd ../backend</code></pre>
+        </li>
+        <li>Install the dependencies:
+            <pre><code>npm install</code></pre>
+        </li>
+    </ol>
 
-### Frontend
+    <h2 id="database-setup">Database Setup</h2>
+    <ol>
+        <li>Download and install <a href="https://dev.mysql.com/downloads/mysql/">MySQL Server</a> and <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a>.</li>
+        <li>Create a new database called <code>litnerd</code> in MySQL Workbench.</li>
+        <li>Create the following tables:
+            <pre><code>
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
 
-- [React](https://www.google.com/url?sa=t&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiN1e7p55yHAxWrRPEDHfIOCBoQFnoECAYQAQ&url=https%3A%2F%2Freact.dev%2F&usg=AOvVaw1tEjYYiD7LQlxO53dgjTHV&opi=89978449)
-- [Axios](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiR7YCI6JyHAxW6RPEDHUWZBw4QFnoECBQQAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Faxios&usg=AOvVaw1qBY3XtHMePQgJzETxlPwf&opi=89978449)
-- [React Router DOM](https://reactrouter.com/en/main)
-- [React Quill](https://www.npmjs.com/package/react-quill) (Rich Text Editor)
-- [Sass](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwigqtjL6JyHAxU_QvEDHcMZAocQFnoECAwQAQ&url=https%3A%2F%2Fsass-lang.com%2F&usg=AOvVaw0p_IRgLEbIPRGWtlW7Wph8&opi=89978449) (CSS Preprocessor)
-- [FontAwesome](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjI6tXS6JyHAxUIS_EDHQk9Dd4QFnoECBMQAQ&url=https%3A%2F%2Fcdnjs.com%2Flibraries%2Ffont-awesome&usg=AOvVaw1eImeVzSxU6O0cwRlj7cPq&opi=89978449) (Icons)
-- [Moment.js](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjrnJva6JyHAxWDSfEDHd3yCS8QFnoECB4QAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fmoment&usg=AOvVaw1y_GYQTJS_XrztceLnl8xO&opi=89978449) (Date manipulation)
-- [DOMPurify](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwixqYTi6JyHAxWnSvEDHdN4CzMQFnoECAYQAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fdompurify&usg=AOvVaw3AtUzRgysEkHNPK2Jwp2vb&opi=89978449) (Sanitizing HTML)
+CREATE TABLE `posts` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `desc` varchar(10000) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `uid` int NOT NULL,
+  `cat` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `uid_idx` (`uid`),
+  CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+            </code></pre>
+        </li>
+    </ol>
 
-### Backend
-
-- [Node.js](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiHqOX46JyHAxVeX_EDHZafAjkQFnoECAYQAQ&url=https%3A%2F%2Fnodejs.org%2Fen&usg=AOvVaw1dFXYHr5kNGMvANfSjX4lC&opi=89978449)
-- [Express.js](https://expressjs.com/)
-- [MySQL](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiayNOC6ZyHAxVXQ_EDHW-gCv0QFnoECAYQAQ&url=https%3A%2F%2Fwww.mysql.com%2F&usg=AOvVaw20c6IrMAtNC1A9NZPsDpWW&opi=89978449)
-- [Multer](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwipmpaH6ZyHAxVgSfEDHZ2IDSEQFnoECAYQAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fmulter&usg=AOvVaw1V0kwzYTbQYRL4I23cBqvn&opi=89978449) (File upload handling)
-- [JWT](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiBs5OM6ZyHAxXCQvEDHSZfBNoQFnoECEsQAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjsonwebtoken&usg=AOvVaw0586jpaPZctseC_IrWlxQF&opi=89978449) (JSON Web Token for authentication)
-- [Bcrypt.js](https://www.npmjs.com/package/bcryptjs) (Password hashing)
-- [Cookie-parser](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjT1ICX6ZyHAxXXSvEDHTX2Bq8QFnoECAYQAQ&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcookie-parser&usg=AOvVaw1cfYg8uKIjvVMt7Iyn-zba&opi=89978449)
-
-## Installation
-
-### Prerequisites
-
-- Node.js
-- MySQL Server and Workbench
-
-### Frontend Setup
-
-1. Clone the repository:
-
-   ```ssh
-   git clone https://github.com/iganza-roy/litnerd-letters.git
-   ```
-
-2. Navigate to the frontend directory:
-
-   ```
-   cd litnerd-letters/frontend
-   ```
-
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-
-   ```
-   cd ../backend
-   ```
-
-2. Install the dependencies:
-   ```
-   npm install
-   ```
-
-## Database Setup
-
-1. Download and install [MySQL Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
-
-2. Create a new database called `litnerd` in MySQL Workbench.
-
-3. Create the following tables:
-
-   ```sql
-   CREATE TABLE `users` (
-     `id` int NOT NULL AUTO_INCREMENT,
-     `username` varchar(45) NOT NULL,
-     `email` varchar(255) NOT NULL,
-     `password` varchar(255) NOT NULL,
-     `img` varchar(255) DEFAULT NULL,
-     PRIMARY KEY (`id`)
-   );
-
-   CREATE TABLE `posts` (
-     `id` int NOT NULL AUTO_INCREMENT,
-     `title` varchar(255) NOT NULL,
-     `desc` varchar(10000) NOT NULL,
-     `img` varchar(255) NOT NULL,
-     `date` datetime NOT NULL,
-     `uid` int NOT NULL,
-     `cat` varchar(45) NOT NULL,
-     PRIMARY KEY (`id`),
-     KEY `uid_idx` (`uid`),
-     CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-   );
-   ```
-
-## Environment Variables
-
-Create a `.env` file in the backend directory with the following content:
-
-```env
-DB_HOST=your_db_host
+    <h2 id="environment-variables">Environment Variables</h2>
+    <p>Create a <code>.env</code> file in the backend directory with the following content:</p>
+    <pre><code>DB_HOST=your_db_host
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_NAME=litnerd
-```
+</code></pre>
 
-## usage
+    <h2 id="usage">Usage</h2>
+    <h3>Running the Frontend</h3>
+    <ol>
+        <li>Navigate to the frontend directory:
+            <pre><code>cd ../frontend</code></pre>
+        </li>
+        <li>Start the frontend development server:
+            <pre><code>npm start</code></pre>
+        </li>
+    </ol>
 
-### Running the Frontend
+    <h3>Running the Backend</h3>
+    <ol>
+        <li>Navigate to the backend directory:
+            <pre><code>cd ../backend</code></pre>
+        </li>
+        <li>Start the backend server:
+            <pre><code>npm start</code></pre>
+        </li>
+    </ol>
 
-Navigate to the frontend directory:
+    <h3>Access the Application</h3>
+    <p>Open your browser and navigate to <a href="http://localhost:3000">http://localhost:3000</a> to access LitNerd Letters.</p>
+    <img src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/sample.jpeg" alt="cover" style="width:100%;max-width:600px;">
 
-```
-cd ../frontend
-```
+    <h2 id="contributing">Contributing</h2>
+    <p>We welcome contributions to enhance LitNerd Letters. To contribute:</p>
+    <ol>
+        <li>Fork the repository.</li>
+        <li>Create a new branch:
+            <pre><code>git checkout -b feature-branch</code></pre>
+        </li>
+        <li>Commit your changes:
+            <pre><code>git commit -m 'Add new feature'</code></pre>
+        </li>
+        <li>Push to the branch:
+            <pre><code>git push origin feature-branch</code></pre>
+        </li>
+        <li>Create a new Pull Request.</li>
+    </ol>
+    <p>We hope you enjoy using LitNerd Letters to share and discover fascinating articles and stories. For any issues or questions, please feel free to reach out to us.</p>
 
-Start the frontend development server:
-
-```
-npm start
-```
-
-### Running the Backend
-
-Navigate to the backend directory:
-
-```
-cd ../backend
-```
-
-Start the backend server:
-
-```
-npm start
-```
-
-### Access the Application
-
-Open your browser and navigate to http://localhost:3000 to access LitNerd Letters.
-
-![cover](https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/sample.jpeg)
-
-## Contributing
-
-We welcome contributions to enhance LitNerd Letters. To contribute:
-
-1. Fork the repository.
-2. Create a new branch (git checkout -b feature-branch).
-3. Commit your changes (git commit -m 'Add new feature').
-4. Push to the branch (git push origin feature-branch).
-5. Create a new Pull Request.
-
-We hope you enjoy using LitNerd Letters to share and discover fascinating articles and stories. For any issues or questions, please feel free to reach out to us.
-
-
-## Author:
-
-[Roy Iganza Kibata](https://github.com/Iganza-roy)
+    <h2 id="author">Author</h2>
+    <p><a href="https://github.com/Iganza-roy">Roy Iganza Kibata</a></p>
+</body>
+</html>
