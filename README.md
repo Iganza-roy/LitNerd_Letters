@@ -139,6 +139,7 @@
       </li>
       <li>
         Create the following tables:
+        
 ```sql
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -161,7 +162,7 @@ CREATE TABLE `posts` (
   KEY `uid_idx` (`uid`),
   CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
-``
+```
 </li>
     </ol>
     <h2 id="environment-variables">Environment Variables</h2>
