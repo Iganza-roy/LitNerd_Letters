@@ -139,7 +139,7 @@
       </li>
       <li>
         Create the following tables:
-        <pre><code>
+```sql
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(45) NOT NULL,
@@ -161,8 +161,8 @@ CREATE TABLE `posts` (
   KEY `uid_idx` (`uid`),
   CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
-</code></pre>
-      </li>
+``
+</li>
     </ol>
     <h2 id="environment-variables">Environment Variables</h2>
     <p>
