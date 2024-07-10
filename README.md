@@ -6,7 +6,7 @@
 
 LitNerd Letters is a blog site where bloggers and writers can easily create, share, and discover articles and stories. It serves as a platform for literary enthusiasts to connect and share their insights and narratives.
 
-click [here](https://iganza-roy.github.io/Litnerd_letters-about/) to learn more about litnerd letters.
+Click [here](https://iganza-roy.github.io/Litnerd_letters-about/) to learn more about litnerd letters.
 
 ## Table of Contents
 
