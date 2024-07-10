@@ -176,6 +176,7 @@ We welcome contributions to enhance LitNerd Letters. To contribute:
 
 We hope you enjoy using LitNerd Letters to share and discover fascinating articles and stories. For any issues or questions, please feel free to reach out to us.
 
+
 ## Author:
 
 [Roy Iganza Kibata](https://github.com/Iganza-roy)
