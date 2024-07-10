@@ -1,5 +1,7 @@
 # LitNerd Letters
 
+![cover](https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg)
+
 ## Snippets of Stories and Insights
 
 LitNerd Letters is a blog site where bloggers and writers can easily create, share, and discover articles and stories. It serves as a platform for literary enthusiasts to connect and share their insights and narratives.
