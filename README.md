@@ -168,6 +168,8 @@ npm start
 
 Open your browser and navigate to http://localhost:3000 to access LitNerd Letters.
 
+!(cover)[https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/sample.jpeg]
+
 ## Contributing
 
 We welcome contributions to enhance LitNerd Letters. To contribute:
