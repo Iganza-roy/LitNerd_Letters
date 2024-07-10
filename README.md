@@ -13,7 +13,7 @@ LitNerd Letters is a blog site where bloggers and writers can easily create, sha
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Author](#Author)
 
 ## Features
 
@@ -170,5 +170,5 @@ We welcome contributions to enhance LitNerd Letters. To contribute:
 
 We hope you enjoy using LitNerd Letters to share and discover fascinating articles and stories. For any issues or questions, please feel free to reach out to us.
 
-Author:
+## Author:
 [Roy Iganza Kibata](https://github.com/Iganza-roy)
