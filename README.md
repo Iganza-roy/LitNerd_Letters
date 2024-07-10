@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LitNerd Letters</title>
-  </head>
   <body>
     <h1>
       <a href="https://iganza-roy.github.io/Litnerd_letters-about/"
@@ -241,4 +234,3 @@ DB_NAME=litnerd
     <h2 id="author">Author</h2>
     <p><a href="https://github.com/Iganza-roy">Roy Iganza Kibata</a></p>
   </body>
-</html>
