@@ -1,6 +1,9 @@
+// footer component
+
 import React from "react";
 import Logo from "../images/logo_without_bg.png";
 
+// defining the footer component
 const Footer = () => {
   return (
     <footer>

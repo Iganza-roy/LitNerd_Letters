@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Logo from "../images/Litnerd_letters_logo_name.png";
 import { AuthContext } from "../context/authContext.js";
 
+// Define the Navbar component
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
 
@@ -47,7 +48,7 @@ const Navbar = () => {
         </span>
         <div className="profile">
           {" "}
-          {/*display username and logout/login*/}
+          {/*display username and logout link if currentUser has a truthy value */}
           <Link className="link username">
             <span>{currentUser?.username}</span>
           </Link>
@@ -57,6 +58,8 @@ const Navbar = () => {
             </Link>
           ) : (
             <Link className="link username" to="/login">
+              {" "}
+              {/* display login link if currentUser is null or falsy*/}
               Login
             </Link>
           )}
