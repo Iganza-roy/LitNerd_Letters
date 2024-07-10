@@ -21,6 +21,7 @@
       <a href="https://iganza-roy.github.io/Litnerd_letters-about/">here</a> to
       learn more about litnerd letters.
     </p>
+    <p>Author's linkedin - [Iganzaroy](https://www.linkedin.com/in/royiganzakibata)</p>
     <h2>Table of Contents</h2>
     <ul>
       <li><a href="#features">Features</a></li>
