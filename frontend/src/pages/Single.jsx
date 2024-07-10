@@ -1,4 +1,5 @@
 // Handling display of a single post
+
 import React, { useContext, useEffect, useState } from "react";
 import Edit from "../images/edit.png";
 import Delete from "../images/delete.png";
@@ -9,10 +10,11 @@ import moment from "moment";
 import { AuthContext } from "../context/authContext";
 import DOMPurify from "dompurify";
 
+// defining the single component
 const Single = () => {
   const navigate = useNavigate();
 
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState({}); // state to handle store fetched post
 
   const location = useLocation();
 

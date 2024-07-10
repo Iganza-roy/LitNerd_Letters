@@ -7,12 +7,13 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import moment from "moment";
 
+// defining the write component to handle creation/editing of a post
 const Write = () => {
   const state = useLocation().state;
-  const [value, setValue] = useState(state?.desc || "");
-  const [title, setTitle] = useState(state?.title || "");
-  const [file, setFile] = useState(null);
-  const [cat, setCat] = useState(state?.cat || "");
+  const [value, setValue] = useState(state?.desc || ""); // state to handle stored description
+  const [title, setTitle] = useState(state?.title || ""); // state to handle stored title
+  const [file, setFile] = useState(null); // state to handle stored uploaded image
+  const [cat, setCat] = useState(state?.cat || ""); // state to handle stored category
 
   const navigate = useNavigate();
 
@@ -34,7 +35,9 @@ const Write = () => {
     e.preventDefault();
     const imgUrl = await upload();
 
+    // try fetching existing data for editing else
     try {
+      // check if state object exists (testing editing an existing post)
       state
         ? await axios.put(`/posts/${state.id}`, {
             title,

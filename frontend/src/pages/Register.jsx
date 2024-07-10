@@ -1,9 +1,13 @@
+// This file contains the implementation of the regiseration page
+
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../images/Litnerd_letters_logo_name.png";
 import axios from "axios";
 
+// defining the register component
 const Register = () => {
+  // state to manage inputs
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
@@ -14,14 +18,17 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  // handle form input change event
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      // Attempt registration
       await axios.post("/auth/register", inputs);
       navigate("/login");
     } catch (err) {

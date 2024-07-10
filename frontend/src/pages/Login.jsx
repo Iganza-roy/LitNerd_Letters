@@ -1,9 +1,13 @@
+// this code contains the implementation of the login page
+
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../images/Litnerd_letters_logo_name.png";
 import { AuthContext } from "../context/authContext.js";
 
+//defining the login component
 const Login = () => {
+  // state to manage form inputs
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
@@ -15,14 +19,17 @@ const Login = () => {
 
   const { login } = useContext(AuthContext);
 
+  // handle form input changes
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      // Attempt login using the login function from AuthContext
       await login(inputs);
       navigate("/");
     } catch (err) {
