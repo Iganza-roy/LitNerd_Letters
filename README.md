@@ -58,31 +58,34 @@ LitNerd Letters is a blog site where bloggers and writers can easily create, sha
 ### Frontend Setup
 
 1. Clone the repository:
-    ```
-    git clone https://github.com/iganza-roy/litnerd-letters.git
-    ```
+
+   ```ssh
+   git clone https://github.com/iganza-roy/litnerd-letters.git
+   ```
 
 2. Navigate to the frontend directory:
-    ```
-    cd litnerd-letters/frontend
-    ```
+
+   ```
+   cd litnerd-letters/frontend
+   ```
 
 3. Install the dependencies:
-    ```
-    npm install
-    ```
+   ```
+   npm install
+   ```
 
 ### Backend Setup
 
 1. Navigate to the backend directory:
-    ```
-    cd ../backend
-    ```
+
+   ```
+   cd ../backend
+   ```
 
 2. Install the dependencies:
-    ```
-    npm install
-    ```
+   ```
+   npm install
+   ```
 
 ## Database Setup
 
@@ -92,29 +95,29 @@ LitNerd Letters is a blog site where bloggers and writers can easily create, sha
 
 3. Create the following tables:
 
-    ```sql
-    CREATE TABLE `users` (
-      `id` int NOT NULL AUTO_INCREMENT,
-      `username` varchar(45) NOT NULL,
-      `email` varchar(255) NOT NULL,
-      `password` varchar(255) NOT NULL,
-      `img` varchar(255) DEFAULT NULL,
-      PRIMARY KEY (`id`)
-    );
+   ```sql
+   CREATE TABLE `users` (
+     `id` int NOT NULL AUTO_INCREMENT,
+     `username` varchar(45) NOT NULL,
+     `email` varchar(255) NOT NULL,
+     `password` varchar(255) NOT NULL,
+     `img` varchar(255) DEFAULT NULL,
+     PRIMARY KEY (`id`)
+   );
 
-    CREATE TABLE `posts` (
-      `id` int NOT NULL AUTO_INCREMENT,
-      `title` varchar(255) NOT NULL,
-      `desc` varchar(10000) NOT NULL,
-      `img` varchar(255) NOT NULL,
-      `date` datetime NOT NULL,
-      `uid` int NOT NULL,
-      `cat` varchar(45) NOT NULL,
-      PRIMARY KEY (`id`),
-      KEY `uid_idx` (`uid`),
-      CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-    );
-    ```
+   CREATE TABLE `posts` (
+     `id` int NOT NULL AUTO_INCREMENT,
+     `title` varchar(255) NOT NULL,
+     `desc` varchar(10000) NOT NULL,
+     `img` varchar(255) NOT NULL,
+     `date` datetime NOT NULL,
+     `uid` int NOT NULL,
+     `cat` varchar(45) NOT NULL,
+     PRIMARY KEY (`id`),
+     KEY `uid_idx` (`uid`),
+     CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+   );
+   ```
 
 ## Environment Variables
 
@@ -128,7 +131,9 @@ DB_NAME=litnerd
 ```
 
 ## usage
+
 ### Running the Frontend
+
 Navigate to the frontend directory:
 
 ```
@@ -142,6 +147,7 @@ npm start
 ```
 
 ### Running the Backend
+
 Navigate to the backend directory:
 
 ```
@@ -155,10 +161,11 @@ npm start
 ```
 
 ### Access the Application
+
 Open your browser and navigate to http://localhost:3000 to access LitNerd Letters.
 
-
 ## Contributing
+
 We welcome contributions to enhance LitNerd Letters. To contribute:
 
 1. Fork the repository.
@@ -167,8 +174,8 @@ We welcome contributions to enhance LitNerd Letters. To contribute:
 4. Push to the branch (git push origin feature-branch).
 5. Create a new Pull Request.
 
-
 We hope you enjoy using LitNerd Letters to share and discover fascinating articles and stories. For any issues or questions, please feel free to reach out to us.
 
 ## Author:
+
 [Roy Iganza Kibata](https://github.com/Iganza-roy)
