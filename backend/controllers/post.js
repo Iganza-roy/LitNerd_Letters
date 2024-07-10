@@ -1,21 +1,25 @@
-// managing posts
+// This file handles functionalities related to blog posts (fetching, adding, deleting, updating).
 
 import { db } from "../dbm.js";
 import jwt from "jsonwebtoken";
 
-// fetching & filtering posts
+// Function to fetch all posts (with optional filtering)
 export const getPosts = (req, res) => {
+  // Retrieve search query and category from request parameters
   const searchQuery = req.query.search;
   const catQuery = req.query.cat;
 
+  // Construct a base query to fetch all posts
   let q = req.query.cat
     ? "SELECT * FROM posts WHERE cat=?"
     : "SELECT * FROM posts";
 
+  // Add search filter if provided
   if (searchQuery) {
     q += catQuery ? " AND title LIKE ?" : " WHERE title LIKE ?";
   }
 
+  // Prepare query parameters
   const queryParams = [];
   if (catQuery) queryParams.push(catQuery);
   if (searchQuery) queryParams.push(`%${searchQuery}%`);
@@ -26,7 +30,7 @@ export const getPosts = (req, res) => {
   });
 };
 
-// fetching single post by id
+// Function to fetch a single post by its ID
 export const getPost = (req, res) => {
   const q =
     "SELECT p.id, `username`, `title`, `desc`, p.img, u.img AS userImg, `cat`,`date` FROM users u JOIN posts p ON u.id = p.uid WHERE p.id = ? ";
@@ -38,8 +42,9 @@ export const getPost = (req, res) => {
   });
 };
 
-//adding a new post
+// Function to add a new post
 export const addPost = (req, res) => {
+  // Check for access token in cookies
   const token = req.cookies.access_token;
   if (!token) return res.status(401).json("Not Authenticated!");
 
@@ -65,7 +70,7 @@ export const addPost = (req, res) => {
   });
 };
 
-// deleting posts by id
+// Function to delete a post by ID
 export const deletePost = (req, res) => {
   const token = req.cookies.access_token;
   if (!token) return res.status(401).json("Not Authenticated!");
@@ -85,7 +90,7 @@ export const deletePost = (req, res) => {
   });
 };
 
-// updating posts by id
+// Function to update post bY ID
 export const updatePost = (req, res) => {
   const token = req.cookies.access_token;
   if (!token) return res.status(401).json("Not Authenticated!");

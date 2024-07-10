@@ -1,3 +1,5 @@
+// This file defines routes for managing blog posts (fetching, adding, deleting, updating).
+
 import express from "express";
 import {
   addPost,
