@@ -20,6 +20,8 @@
 <br />
 
 <div align="center">
+
+### Quick Links
   
 **[OFFICIAL PAGE](https://litnerdletters.netlify.app/) • 
   [ABOUT](https://iganza-roy.github.io/Litnerd_letters-about/) • 
@@ -27,11 +29,6 @@
   [LINKEDIN](https://www.linkedin.com/in/royiganzakibata)**
     
 </div>
-    
-<br />
-
----
-
 
 <h2>Table of Contents</h2>
     <ul>
@@ -44,7 +41,7 @@
       <li><a href="#contributing">Contributing</a></li>
       <li><a href="#author">Author</a></li>
     </ul>
-    <h2 id="features">Features</h2>
+    <h2 id="features">🌟 Features</h2>
     <ul>
       <li>User authentication and authorization</li>
       <li>Create, read, update, and delete (CRUD) functionality for posts</li>
@@ -54,7 +51,7 @@
       <li>File upload for post images</li>
       <li>Responsive design</li>
     </ul>
-    <h2 id="technologies-used">Technologies Used</h2>
+    <h2 id="technologies-used">👨‍💻 Technologies Used</h2>
     <h3>Frontend</h3>
     <ul>
       <li><a href="https://react.dev/">React</a></li>
@@ -221,7 +218,7 @@ DB_NAME=litnerd
       alt="cover"
       style="width: 100%; max-width: 600px"
     />
-    <h2 id="contributing">Contributing</h2>
+    <h2 id="contributing">✍️ Contributing</h2>
     <p>We welcome contributions to enhance LitNerd Letters. To contribute:</p>
     <ol>
       <li>Fork the repository.</li>
