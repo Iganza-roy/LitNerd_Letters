@@ -1,28 +1,39 @@
-  <body>
-    <h1>
-      <a href="https://iganza-roy.github.io/Litnerd_letters-about/"
-        >LitNerd Letters</a
-      >
-    </h1>
-    <img
-      src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg"
-      alt="cover"
-      style="width: 100%; max-width: 600px"
-    />
-    <h2>Snippets of Stories and Insights</h2>
-    <p>
+<div align='center'>
+  
+<h1><a href="https://iganza-roy.github.io/Litnerd_letters-about/">LitNerd Letters</a></h1>
+
+<h2>Snippets of Stories and Insights</h2>
+
+<p>
       LitNerd Letters is a blog site where bloggers and writers can easily
       create, share, and discover articles and stories. It serves as a platform
       for literary enthusiasts to connect and share their insights and
       narratives.
-    </p>
-    <p>
-      Click
-      <a href="https://iganza-roy.github.io/Litnerd_letters-about/">here</a> to
-      learn more about litnerd letters.
-    </p>
-    <p>Author's linkedin - <a href="https://www.linkedin.com/in/royiganzakibata">Iganzaroy</a></p>
-    <h2>Table of Contents</h2>
+</p>
+  
+<img src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg"/>
+
+</div>
+
+---
+
+<br />
+
+<div align="center">
+  
+**[OFFICIAL PAGE](https://litnerdletters.netlify.app/) • 
+  [ABOUT](https://iganza-roy.github.io/Litnerd_letters-about/) • 
+  [BLOG POST]() • 
+  [LINKEDIN](https://www.linkedin.com/in/royiganzakibata)**
+    
+</div>
+    
+<br />
+
+---
+
+
+<h2>Table of Contents</h2>
     <ul>
       <li><a href="#features">Features</a></li>
       <li><a href="#technologies-used">Technologies Used</a></li>
