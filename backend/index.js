@@ -1,12 +1,12 @@
 // main entry point for the backend server
 
 import express from "express";
+import cors from "cors";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
-import cors from "cors";
 
 const app = express();
 
