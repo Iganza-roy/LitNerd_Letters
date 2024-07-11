@@ -11,8 +11,21 @@ import cors from "cors";
 const app = express();
 
 // Enabling CORS for frontend domain
+const allowedOrigins = [
+  "https://litnerdletters.netlify.app",
+  "http://localhost:3000",
+];
+
+// CORS options
 const corsOptions = {
-  origin: "https://litnerdletters.netlify.app",
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
