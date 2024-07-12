@@ -32,6 +32,8 @@
 - [Contributing](#contributing)
 - [Author](#author)
 
+---
+
 ## 🌟 Features
 - User authentication and authorization 🔐
 - Create, read, update, and delete (CRUD) functionality for posts 📝
