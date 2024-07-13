@@ -1,146 +1,111 @@
-  <body>
-    <h1>
-      <a href="https://iganza-roy.github.io/Litnerd_letters-about/"
-        >LitNerd Letters</a
-      >
-    </h1>
-    <img
-      src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg"
-      alt="cover"
-      style="width: 100%; max-width: 600px"
-    />
-    <h2>Snippets of Stories and Insights</h2>
-    <p>
-      LitNerd Letters is a blog site where bloggers and writers can easily
-      create, share, and discover articles and stories. It serves as a platform
-      for literary enthusiasts to connect and share their insights and
-      narratives.
-    </p>
-    <p>
-      Click
-      <a href="https://iganza-roy.github.io/Litnerd_letters-about/">here</a> to
-      learn more about litnerd letters.
-    </p>
-    <p>Author's linkedin - <a href="https://www.linkedin.com/in/royiganzakibata">Iganzaroy</a></p>
-    <h2>Table of Contents</h2>
-    <ul>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#technologies-used">Technologies Used</a></li>
-      <li><a href="#installation">Installation</a></li>
-      <li><a href="#database-setup">Database Setup</a></li>
-      <li><a href="#environment-variables">Environment Variables</a></li>
-      <li><a href="#usage">Usage</a></li>
-      <li><a href="#contributing">Contributing</a></li>
-      <li><a href="#author">Author</a></li>
-    </ul>
-    <h2 id="features">Features</h2>
-    <ul>
-      <li>User authentication and authorization</li>
-      <li>Create, read, update, and delete (CRUD) functionality for posts</li>
-      <li>Rich text editor for creating and editing posts</li>
-      <li>Category-based post filtering</li>
-      <li>Search functionality</li>
-      <li>File upload for post images</li>
-      <li>Responsive design</li>
-    </ul>
-    <h2 id="technologies-used">Technologies Used</h2>
-    <h3>Frontend</h3>
-    <ul>
-      <li><a href="https://react.dev/">React</a></li>
-      <li><a href="https://www.npmjs.com/package/axios">Axios</a></li>
-      <li><a href="https://reactrouter.com/en/main">React Router DOM</a></li>
-      <li>
-        <a href="https://www.npmjs.com/package/react-quill"
-          >React Quill (Rich Text Editor)</a
-        >
-      </li>
-      <li><a href="https://sass-lang.com/">Sass (CSS Preprocessor)</a></li>
-      <li>
-        <a href="https://cdnjs.com/libraries/font-awesome"
-          >FontAwesome (Icons)</a
-        >
-      </li>
-      <li>
-        <a href="https://www.npmjs.com/package/moment"
-          >Moment.js (Date manipulation)</a
-        >
-      </li>
-      <li>
-        <a href="https://www.npmjs.com/package/dompurify"
-          >DOMPurify (Sanitizing HTML)</a
-        >
-      </li>
-    </ul>
-    <h3>Backend</h3>
-    <ul>
-      <li><a href="https://nodejs.org/en">Node.js</a></li>
-      <li><a href="https://expressjs.com/">Express.js</a></li>
-      <li><a href="https://www.mysql.com/">MySQL</a></li>
-      <li>
-        <a href="https://www.npmjs.com/package/multer"
-          >Multer (File upload handling)</a
-        >
-      </li>
-      <li>
-        <a href="https://www.npmjs.com/package/jsonwebtoken"
-          >JWT (JSON Web Token for authentication)</a
-        >
-      </li>
-      <li>
-        <a href="https://www.npmjs.com/package/bcryptjs"
-          >Bcrypt.js (Password hashing)</a
-        >
-      </li>
-      <li>
-        <a href="https://www.npmjs.com/package/cookie-parser">Cookie-parser</a>
-      </li>
-    </ul>
-    <h2 id="installation">Installation</h2>
-    <h3>Prerequisites</h3>
-    <ul>
-      <li>Node.js</li>
-      <li>MySQL Server and Workbench</li>
-    </ul>
-    <h3>Frontend Setup</h3>
-    <ol>
-      <li>
-        Clone the repository:
-        <pre><code>git clone https://github.com/iganza-roy/litnerd-letters.git</code></pre>
-      </li>
-      <li>
-        Navigate to the frontend directory:
-        <pre><code>cd litnerd-letters/frontend</code></pre>
-      </li>
-      <li>
-        Install the dependencies:
-        <pre><code>npm install</code></pre>
-      </li>
-    </ol>
-    <h3>Backend Setup</h3>
-    <ol>
-      <li>
-        Navigate to the backend directory:
-        <pre><code>cd ../backend</code></pre>
-      </li>
-      <li>
-        Install the dependencies:
-        <pre><code>npm install</code></pre>
-      </li>
-    </ol>
-    <h2 id="database-setup">Database Setup</h2>
-    <ol>
-      <li>
-        Download and install
-        <a href="https://dev.mysql.com/downloads/mysql/">MySQL Server</a> and
-        <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a
-        >.
-      </li>
-      <li>
-        Create a new database called <code>litnerd</code> in MySQL Workbench.
-      </li>
-      <li>
-        Create the following tables:
-        
+<div align='center'>
+  <h1><a href="https://iganza-roy.github.io/Litnerd_letters-about/">LitNerd Letters 📖</a></h1>
+  <h2>Snippets of Stories and Insights ✍️</h2>
+  <p>
+    LitNerd Letters is a blog site where bloggers and writers can easily create, share, and discover articles and stories. It serves as a platform for literary enthusiasts to connect and share their insights and narratives.
+  </p>
+  <img src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/cover_img.jpg"style="border-radius: 10px; box-shadow: 0 5px 20px rgba(43, 0, 56, 0.559);"/>
+</div>
+
+---
+
+<div align="center">
+
+### Quick Links 🌐
+
+**[OFFICIAL PAGE](https://litnerdletters.netlify.app/) • 
+[ABOUT](https://iganza-roy.github.io/Litnerd_letters-about/) • 
+[BLOG POST]() • 
+[LINKEDIN](https://www.linkedin.com/in/royiganzakibata)**
+
+</div>
+
+---
+
+## Table of Contents 📋
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Database Setup](#database-setup)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Author](#author)
+
+---
+
+## 🌟 Features
+- User authentication and authorization 🔐
+- Create, read, update, and delete (CRUD) functionality for posts 📝
+- Rich text editor for creating and editing posts ✒️
+- Category-based post filtering 🗂️
+- Search functionality 🔍
+- File upload for post images 🖼️
+- Responsive design 📱
+
+## 👨‍💻 Technologies Used
+
+### Frontend 🌐
+- [React](https://react.dev/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Router DOM](https://reactrouter.com/en/main)
+- [React Quill (Rich Text Editor)](https://www.npmjs.com/package/react-quill)
+- [Sass (CSS Preprocessor)](https://sass-lang.com/)
+- [FontAwesome (Icons)](https://cdnjs.com/libraries/font-awesome)
+- [Moment.js (Date manipulation)](https://www.npmjs.com/package/moment)
+- [DOMPurify (Sanitizing HTML)](https://www.npmjs.com/package/dompurify)
+
+### Backend 💾
+- [Node.js](https://nodejs.org/en)
+- [Express.js](https://expressjs.com/)
+- [MySQL](https://www.mysql.com/)
+- [Multer (File upload handling)](https://www.npmjs.com/package/multer)
+- [JWT (JSON Web Token for authentication)](https://www.npmjs.com/package/jsonwebtoken)
+- [Bcrypt.js (Password hashing)](https://www.npmjs.com/package/bcryptjs)
+- [Cookie-parser](https://www.npmjs.com/package/cookie-parser)
+
+
+# Running the App locally
+
+## Installation ⚙️
+
+### Prerequisites
+- Node.js
+- MySQL Server and Workbench
+
+### Frontend Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/iganza-roy/litnerd-letters.git
+   ```
+2. Navigate to the frontend directory:
+
+  ```bash
+  cd litnerd-letters/frontend
+  ```
+
+3. Install dependencies
+   ```
+   npm install
+   ```
+
+### Backend Setup
+
+1. Navigate to the backend directory
+  ```
+cd ../backend
+  ```
+2. Install dependencies
+```
+npm install
+```
+
+### Database Setup 🗄️
+1. Download and install [MySQL Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://dev.mysql.com/downloads/workbench/).
+2. Create a new database called ```litnerd``` in MySQL Workbench.
+3. Create the following tables:
+
+
 ```sql
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -150,7 +115,7 @@ CREATE TABLE `users` (
   `img` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
-            
+
 CREATE TABLE `posts` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -164,75 +129,72 @@ CREATE TABLE `posts` (
   CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 ```
-</li>
-    </ol>
-    <h2 id="environment-variables">Environment Variables</h2>
-    <p>
-      Create a <code>.env</code> file in the backend directory with the
-      following content:
-    </p>
-    <pre><code>DB_HOST=your_db_host
+
+### Environment Variables 🗝️
+
+Create a `.env` file in the backend directory with the following content:
+
+```env
+DB_HOST=your_db_host
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_NAME=litnerd
-</code></pre>
-    <h2 id="usage">Usage</h2>
-    <h3>Running the Frontend</h3>
-    <ol>
-      <li>
-        Navigate to the frontend directory:
-        <pre><code>cd ../frontend</code></pre>
-      </li>
-      <li>
-        Start the frontend development server:
-        <pre><code>npm start</code></pre>
-      </li>
-    </ol>
-    <h3>Running the Backend</h3>
-    <ol>
-      <li>
-        Navigate to the backend directory:
-        <pre><code>cd ../backend</code></pre>
-      </li>
-      <li>
-        Start the backend server:
-        <pre><code>npm start</code></pre>
-      </li>
-    </ol>
-    <h3>Access the Application</h3>
-    <p>
-      Open your browser and navigate to
-      <a href="http://localhost:3000">http://localhost:3000</a> to access
-      LitNerd Letters.
-    </p>
-    <img
-      src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/sample.jpeg"
-      alt="cover"
-      style="width: 100%; max-width: 600px"
-    />
-    <h2 id="contributing">Contributing</h2>
-    <p>We welcome contributions to enhance LitNerd Letters. To contribute:</p>
-    <ol>
-      <li>Fork the repository.</li>
-      <li>
-        Create a new branch:
-        <pre><code>git checkout -b feature-branch</code></pre>
-      </li>
-      <li>
-        Commit your changes:
-        <pre><code>git commit -m 'Add new feature'</code></pre>
-      </li>
-      <li>
-        Push to the branch:
-        <pre><code>git push origin feature-branch</code></pre>
-      </li>
-      <li>Create a new Pull Request.</li>
-    </ol>
-    <p>
-      We hope you enjoy using LitNerd Letters to share and discover fascinating
-      articles and stories. For any issues or questions, please feel free to
-      reach out to us.
-    </p>
-    <h2 id="author">Author</h2>
-    <p><a href="https://github.com/Iganza-roy">Roy Iganza Kibata</a></p>
-  </body>
+```
+
+## Usage 🚀
+
+#### Running the Frontend
+1. Navigate to the frontend directory
+```
+cd ../frontend
+```
+
+2. Start the frontend development server:
+```
+npm start
+```
+
+#### Running the Backend
+1. Navigate to the backend directory:
+   ```
+   cd ../backend
+   ```
+
+2. Start the backend server:
+
+```
+npm start
+```
+
+### Access the Application
+Open your browser and navigate to http://localhost:3000 to access LitNerd Letters.
+
+<img src="https://github.com/Iganza-roy/LitNerd_Letters/blob/main/frontend/public/sample.jpeg" alt="cover" style="width: 100%; max-width: 600px"/>
+
+## ✍️ Contributing
+
+We welcome contributions to enhance LitNerd Letters. To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+
+```
+git checkout -b feature-branch
+```
+
+3. Commit your changes
+```
+git commit -m 'Add new feature'
+```
+
+4. Push to the branch
+```
+git push origin feature-branch
+```
+
+5. Create a new Pull Request.
+We hope you enjoy using LitNerd Letters to share and discover fascinating articles and stories. For any issues or questions, please feel free to reach out to us.
+
+## Author 🖋️
+[Roy Iganza Kibata](https://github.com/Iganza-roy)
+
