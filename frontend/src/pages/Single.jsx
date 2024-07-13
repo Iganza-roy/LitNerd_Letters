@@ -9,12 +9,15 @@ import axios from "axios";
 import moment from "moment";
 import { AuthContext } from "../context/authContext";
 import DOMPurify from "dompurify";
+import CustomModal from "../components/Modal";
 
 // defining the single component
 const Single = () => {
   const navigate = useNavigate();
 
   const [post, setPost] = useState({}); // state to handle store fetched post
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const location = useLocation();
 
@@ -37,8 +40,13 @@ const Single = () => {
 
   // handling delete functionality
   const handleDelete = async () => {
+    setModalIsOpen(true);
+  };
+
+  const handleDeleteConfirmed = async () => {
     try {
       await axios.delete(`/posts/${postId}`);
+      setModalIsOpen(false);
       navigate("/");
     } catch (err) {
       console.log(err);
@@ -61,6 +69,11 @@ const Single = () => {
                 <img src={Edit} alt="edit" />
               </Link>
               <img onClick={handleDelete} src={Delete} alt="delete" />
+              <CustomModal
+                isOpen={modalIsOpen}
+                onRequestClose={() => setModalIsOpen(false)}
+                handleDeleteConfirmed={handleDeleteConfirmed}
+              />
             </div>
           )}
         </div>
