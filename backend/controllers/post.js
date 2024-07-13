@@ -107,7 +107,6 @@ export const updatePost = (req, res) => {
       req.body.desc,
       req.body.img,
       req.body.cat,
-      userInfo.id,
     ];
 
     db.query(q, [...values, postId, userInfo.id], (err, data) => {
