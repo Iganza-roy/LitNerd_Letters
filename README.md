@@ -64,7 +64,6 @@
 - [Bcrypt.js (Password hashing)](https://www.npmjs.com/package/bcryptjs)
 - [Cookie-parser](https://www.npmjs.com/package/cookie-parser)
 
-
 # Running the App locally
 
 ## Installation ⚙️
