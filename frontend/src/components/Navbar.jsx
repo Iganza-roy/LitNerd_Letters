@@ -4,10 +4,26 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/Litnerd_letters_logo_name.png";
 import { AuthContext } from "../context/authContext.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Define the Navbar component
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
+
+  const handlelogout = () => {
+    logout();
+    toast.success("Logged out successfully!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
 
   return (
     <div className="navbar">
@@ -54,7 +70,7 @@ const Navbar = () => {
           </Link>
           {currentUser ? (
             <Link className="link username">
-              <span onClick={logout}>Logout</span>
+              <span onClick={handlelogout}>Logout</span>
             </Link>
           ) : (
             <Link className="link username" to="/login">
@@ -65,6 +81,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
