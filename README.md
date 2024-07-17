@@ -104,7 +104,6 @@ npm install
 2. Create a new database called ```litnerd``` in MySQL Workbench.
 3. Create the following tables:
 
-
 ```sql
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
