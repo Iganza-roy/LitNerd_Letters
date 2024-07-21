@@ -195,4 +195,3 @@ We hope you enjoy using LitNerd Letters to share and discover fascinating articl
 
 ## Author 🖋️
 [Roy Iganza Kibata](https://github.com/Iganza-roy)
-
