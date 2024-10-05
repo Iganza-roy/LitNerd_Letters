@@ -1,6 +1,5 @@
 // This file is the main entry point for the backend server.
 // It sets up the Express application and configures routes and middleware.
-
 import express from "express";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
