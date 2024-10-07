@@ -34,9 +34,7 @@ app.post("/api/upload", upload.single("file"), function (req, res) {
 
 // Mount routes for different API endpoints
 app.use("/api/auth", authRoutes);
-
 app.use("/api/users", userRoutes);
-
 app.use("/api/posts", postRoutes);
 
 // Start the server and listen for connections on port 5500
