@@ -64,7 +64,7 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <RouterProvider router={router} /> {/* Provide the router to the app */}
+        <RouterProvider router={router} />
       </div>
     </div>
   );
