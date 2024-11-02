@@ -1,4 +1,3 @@
-// Import necessary components and libraries for routing and styling
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
