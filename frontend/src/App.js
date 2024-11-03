@@ -15,7 +15,6 @@ import "./styles/home.scss";
 import "./styles/login_register.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-// Create a layout component (used for most pages)
 const Layout = () => {
   return (
     <>
